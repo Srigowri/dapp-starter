@@ -1,4 +1,5 @@
-##Metamask web3 provider:
+## Metamask web3 provider:
+
 Managing user accounts, private keys and connection to Ethereum nodes
 Metamask injects web3 provider into the browser in the global Javascript object **web3**
 So when developing dapp, check for web3 object and use web3.currentProvider. If not ask them to install Metamask to continue using the DApp
@@ -60,9 +61,9 @@ Above code continued
 </body>  
 ```    
 
-##Calling contract functions
+## Calling contract functions
 
-1. call : 
+**1. call**
 
 - Runs on local node without creating transactions on blockchain.
 - view, pure function
@@ -72,7 +73,7 @@ Above code continued
 contract.methods.methodname(arg1,arg2).call()
 ```
 
-2. send
+**2. send**
 - To create transaction, change data
 - Not for view and pure
 - Costs gas and prompts automatically
@@ -127,7 +128,7 @@ contract.methods.methodName(arguments)
 .on("error",function(error){console.log(error})
 ```
 
-##Subscribe to events
+## Subscribe to events
 ```
 <contractName>.events.<eventName>()
 .on("data",function(event){let returnvalues = event.returnvalues;})
@@ -143,8 +144,10 @@ Listening to changes for an indexed param's particular value
 ```
 
 ## Querying past events using filters for fromBlock and toBlock
+```
 contract.getPastEvents(<eventName>,
 {fromBlock:0, toBlock:"latest"})
 .then(function(events){
   // `events` is an array of `event` objects that we can iterate, like we did above
 })
+```
