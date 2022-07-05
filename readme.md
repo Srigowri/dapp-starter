@@ -1,7 +1,9 @@
 ## Metamask web3 provider:
 
 Managing user accounts, private keys and connection to Ethereum nodes
+
 Metamask injects web3 provider into the browser in the global Javascript object **web3**
+
 So when developing dapp, check for web3 object and use web3.currentProvider. If not ask them to install Metamask to continue using the DApp
 ```
 //Initialize Web3.js using metamask's default web3 provider (infura)
@@ -26,7 +28,7 @@ window.addEventListener('load', function() {
 </script>
 </body>
 ```
-##Using Contract
+## Using Contract
 - You will need the contract address and Application Binary Interface (ABI) 
 Above code continued
 ```
@@ -82,7 +84,7 @@ contract.methods.methodName(arguments)
   .send({ from: "0xb60e8dd61c5d32be8058bb8eb970870f07233155", gas: "3000000" })
 ```
 
-##Managing current user's logged in information
+## Managing current user's logged in information
 ```
 <head>
 <script language="javascript" type="text/javascript" src="contract_abi.js"></script>
